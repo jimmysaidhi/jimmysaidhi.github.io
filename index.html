@@ -3,6 +3,7 @@
 <!--Meta-data regarding website. Title of site, and bootstrap request-->
 	<title>Buddhist Church of Florin Webpage Revamp</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./index.css">
 </head>
 
 
@@ -90,9 +91,52 @@
 		<li> Node.js (Backend) </li>
 	</ul><br> 
 	
-	The amount of work completed.<br>
-	How testing has been conducted. (Automated or manual? Tool used?):
-	Testing was automated using jest.js, and Jasmine<br>
+	The amount of work completed.<br><br>
+	<h4>How testing has been conducted</h4>
+	Most tests were automated. A few manual tests were written. <br>
+	<ul>
+		<li> Testing was automated using Jest, a Javascript testing framework developed by Facebook. </li>
+		<li> 47 Test Suites (files) -> 46 automated and 1 manual </li>
+		<li> 97 total tests -> 95 automated, 2 manual </li>
+	</ul>
+
+	<div>Manual tests
+		<ul>
+			<li> 2 manual end to end tests </li>
+			<li> Manual tests were written for tests that involved external actions that were unable to be recorded by a test software</li>
+			<li> For Example: Forgot password feature involves sending a randomly generated 6-digit code to the email entered. User is allowed to change password only if correct code is entered. </li>
+			<li> The file "manual_test_descriptions.txt" has step-by-step descriptions of each manual test</li>
+		</ul>
+	</div>
+
+	<div>Snapshot tests
+		<ul>
+			<li> 36 Snapshot tests </li>
+			<li> React Test Renderer - library used to render isolated components and take a snapshot of a JSON version of the HTML of the component</li>
+			<li> All components have a snapshot test </li>
+			<li> Ensures component renders correctly without any unexpected changes </li>
+		</ul>
+	</div>
+
+	<div>Unit and Integration tests
+		<ul>
+			<li> 49 unit and integration tests </li>
+			<li> Enzyme -  library used to simulate inputs and clicks on isolated components and check states and props </li>
+			<li> React Testing Library - library used to simulate inputs and clicks on isolated components while avoiding referring to implementation details </li>
+			<li> Supertest - library used to test models and api routes with a test Mongodb database </li>
+		</ul>
+	</div>
+
+	<div>End to End (e2e) tests
+		<ul>
+			<li> 10 end to end tests </li>
+			<li> Puppeteer: library used to completely simulate user interaction with a website on a real browser</li>
+			<li> Testing conducted based on what user experiences and sees. Implementation details are not considered.  </li>
+		</ul>
+	</div>
+
+
+	<br><br>
 </p>
 
 <h3 id='lesson'>Lesson Learned</h3>
@@ -113,11 +157,5 @@
 	</ul><br> 
 </p>
 
-
-
-<hr>
-
-<h3>
-<p>
 
 <body>
