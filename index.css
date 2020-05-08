@@ -9,3 +9,61 @@
 .implementation {
     padding-top: 60px;
 }
+
+#menu a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+    #menu a:hover {
+        color: royalblue;
+    }
+
+
+    #menu a:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: royalblue;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+
+    #menu a:hover:before {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+
+
+
+#menu {
+    text-align: center;
+}
+
+    #menu ul {
+        list-style-type: none;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    #menu li {
+        float: left;
+    }
+
+        #menu li a {
+            display: block;
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+
+h1, h2, h3, h4, h5 {
+    margin-top:50px;
+}
